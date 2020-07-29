@@ -7,12 +7,12 @@ El programa debe contener : :notebook_with_decorative_cover:  \
 -[x] Pasando una interfaz como parámetro y devolviendo una interfaz.
 
 
-:file_folder: \
+:file_folder: 
 
 Volviendo a la aplicación de consolsa, esta consta de: \
-:point_right: -Consta de 5 Interfaces  \
-:point_right: - Consta de 11 clases \
-:point_right: -Cada clase tiene de 3 a 4 metodos y sus constructores \
-:point_right: -Existen instancias por cada objeto \
+:point_right: -Consta de 5 Interfaces.  \
+:point_right: - Consta de 11 clases. \
+:point_right: -Cada clase tiene de 3 a 4 metodos. \
+:point_right: -Existen instancias por cada objeto. \
 :point_right: -Existe interacción. \
 :point_right: -Complila correctamente.  
