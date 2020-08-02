@@ -1,8 +1,16 @@
-﻿
-namespace Profesiones.Interface
+﻿using Profesiones.Interface;
+using Profesiones.Entidad;
+using System;
+using System.Diagnostics.CodeAnalysis;
+
+namespace Profesiones.Implementacion
 {
-    public class CarpinteroMusical : ICarpintero
+    public class CarpinteroMusical : ICarpintero, IEquatable<CarpinteroMusical>
     {
+        //Composición
+        private readonly Carpintero carpintero = new Carpintero();
+        public int Id { get { return carpintero.Id; } set { carpintero.Id = value; } }
+        public Carpintero Carpintero { get; set; }
         public string Clavar()
         {
             return "estoy clavando escuchando Pop";
@@ -11,6 +19,11 @@ namespace Profesiones.Interface
         public string Diseñar()
         {
             return "estoy diseñando y bailando";
+        }
+
+        public bool Equals([AllowNull] CarpinteroMusical other)
+        {
+            return this.Id == other.Id;
         }
 
         public string Lacar()

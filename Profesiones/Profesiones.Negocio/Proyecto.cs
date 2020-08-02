@@ -1,7 +1,6 @@
-﻿
-using System.Data.Common;
+﻿using Profesiones.Interface;
 
-namespace Profesiones.Interface
+namespace Profesiones.Negocio
 {
    public class Proyecto
     {

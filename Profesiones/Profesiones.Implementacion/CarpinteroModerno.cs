@@ -1,8 +1,16 @@
-﻿
-namespace Profesiones.Interface
+﻿using Profesiones.Interface;
+using Profesiones.Entidad;
+using System;
+using System.Diagnostics.CodeAnalysis;
+
+namespace Profesiones.Implementacion
 {
-    public class CarpinteroModerno : ICarpintero
+    public class CarpinteroModerno : ICarpintero,IEquatable<CarpinteroModerno>
     {
+        //Composición
+        private readonly Carpintero carpintero = new Carpintero();
+        public int Id { get { return carpintero.Id; } set { carpintero.Id = value; } }
+        public Carpintero Carpintero { get; set; }
         public string Diseñar()
         {
             return "estoy diseñando con Autocad";
@@ -26,6 +34,11 @@ namespace Profesiones.Interface
         public string Lacar()
         {
             return "estoy lacando de secado instantáneo";
+        }
+
+        public bool Equals([AllowNull] CarpinteroModerno other)
+        {
+            return this.Id == other.Id;
         }
     }
 
